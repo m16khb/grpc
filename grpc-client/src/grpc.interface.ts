@@ -7,3 +7,11 @@ export interface IGrpcService {
 interface INumberArray {
   data: number[];
 }
+
+export interface IUserService {
+  create(test: { name: string }): Observable<any>;
+}
+
+export interface IHelloService {
+  findOne(req: { id: string }): Observable<any>;
+}

@@ -6,10 +6,35 @@ service AppController{
   rpc Accumulate(NumberArray) returns (SumOfNumberArray);
 }
 
+service UserService{
+  rpc Create (CreateUserRequestType) returns (CreateUserResponseType) {}
+}
+
+service HelloService{
+  rpc FindOne (Hello) returns (HelloResponse) {}
+}
+
+message Hello{  
+  string id = 1;
+}
+
+message HelloResponse{
+  string response = 1;
+}
+
 message NumberArray{
   repeated double data = 1;
 }
 
 message SumOfNumberArray{
   double sum = 1;
+}
+
+message CreateUserRequestType{
+  string name = 1;
+}
+
+message CreateUserResponseType{
+  int32 responseCode = 2;
+  string responseDesc =  3;
 }
