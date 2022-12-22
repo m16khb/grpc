@@ -2,6 +2,6 @@ NestJS에서 gRPC를 사용하는 가장 기본적인 예제입니다.
 
 client 와 server로 구성되어 있으며 두 프로젝트를 실행시킨 뒤 client의 메소드를 호출하면 server쪽의 메소드를 실행하여 값을 반환합니다.
 
-2개의 같은 VPC 내의 EC2에서 client와 server를 각각 실행하고 두 프로젝트의 grpc.options.ts 내의 url 부분에 서버쪽 EC2의 [privateIP]:[grpc 통신에 사용할 포트]를 입력해 준다.
+2개의 같은 VPC 내의 EC2에서 client와 server를 각각 실행하고 두 프로젝트의 grpc.options.ts 내의 url 부분에 서버쪽 EC2의 [privateIP]:[grpc 통신에 사용할 포트]를 입력해 줍니다.
 
-보안그룹에는 grpc 통신 포트와 nestjs 포트가 열려 있어야 접근이 가능
+보안그룹에는 grpc 통신 포트와 nestjs 포트가 열려 있어야 접근이 가능합니다.
